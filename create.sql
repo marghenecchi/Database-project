@@ -105,7 +105,7 @@ CREATE TABLE Proprietario (
     eta INT,
     professione VARCHAR(50),
     PRIMARY KEY (nome, cognome, mail, numero_di_tessera),
-    FOREIGN KEY (tessera) REFERENCES Tessera(numero)
+    FOREIGN KEY (tessera) REFERENCES Tessera(numero) ON DELETE CASCADE
 );
 
 CREATE TABLE Tratta_CP (
